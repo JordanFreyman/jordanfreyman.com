@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #E0D0C1;
+    background-color: #0E0F19;
 }
 
 .navbar {
-    background-color: #00A676;
+    background-color: #57886C;
     padding: 15px;
 }
 
@@ -31,7 +31,9 @@ body {
 
 .projects-section {
     text-align: left;
-    padding: 10px 5px;
+    font-size: 48px;
+    padding: 20px 15px;
+    color: #F8C7CC;
 }
 
 
@@ -49,8 +51,8 @@ body {
 .project-tile {
     flex: 0 0 300px;
     height: 400px;
-    background: #A76D60;
-    border: 3px solid #601700;
+    background: #466060;
+    border: 3px solid #213939;
     border-radius: 20px;
     text-align: center;
     padding: 0;
@@ -64,8 +66,8 @@ body {
 }
 
 .project-title {
-    background-color: #703e33;
-    color: #F7F9F9;
+    background-color: #F8C7CC;
+    color: #F8C7CC;
     padding: 10px;
     font-weight: bold;
     border-top-left-radius: 20px;
@@ -88,14 +90,14 @@ body {
 }
 
 .project-footer {
-    background-color: #703e33;
+    background-color: #466060;
     padding: 10px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 .project-footer a {
-    color: #F7F9F9;
+    color: #F8C7CC;
     text-decoration: none;
     font-weight: bold;
 }
@@ -110,12 +112,12 @@ body {
 .project-tile a {
     display: block;
     margin-top: 10px;
-    color: #007bff;
+    color: #d89299;
     text-decoration: none;
 }
 
 .carousel-wrapper {
-    background-color: white; /* Background for the rectangle */
+    background-color: #81A684; /* Background for the rectangle */
     border-radius: 20px; /* Rounded corners */
     padding: 30px 20px; /* Space inside the rectangle */
     display: flex;
