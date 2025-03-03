@@ -30,8 +30,8 @@ body {
 
 
 .projects-section {
-    text-align: center;
-    padding: 40px 20px;
+    text-align: left;
+    padding: 10px 5px;
 }
 
 
@@ -112,6 +112,18 @@ body {
     margin-top: 10px;
     color: #007bff;
     text-decoration: none;
+}
+
+.carousel-wrapper {
+    background-color: white; /* Background for the rectangle */
+    border-radius: 20px; /* Rounded corners */
+    padding: 30px 20px; /* Space inside the rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Only as wide as the carousel */
+    margin: auto; /* Centers the rectangle */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
 
