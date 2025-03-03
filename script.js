@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectList = document.querySelector(".carousel");
 
     let scrollAmount = 0;
-    const scrollSpeed = 20; // Speed of scrolling
+    const scrollSpeed = 30;
     const scrollLimit = projectList.scrollWidth - carousel.clientWidth;
 
     function autoScroll(direction) {
