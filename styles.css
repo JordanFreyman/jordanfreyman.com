@@ -2,66 +2,83 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #faaac2;
 }
 
-/* Navigation Bar */
 .navbar {
-    background-color: #222;
+    background-color: #333;
     padding: 15px;
 }
 
 .nav-container {
     display: flex;
     justify-content: flex-end;
-    padding-right: 50px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .nav-right a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 18px;
+    padding: 10px 15px;
 }
 
-/* Welcome Section */
-.welcome-section {
+.nav-right a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+.projects-section {
     text-align: center;
-    padding: 50px 0;
-    background-color: #ddd;
+    padding: 40px 20px;
 }
 
-/* Project Section */
-.projects {
-    padding: 40px;
-    text-align: center;
+/* Carousel Container */
+.carousel-container {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    position: relative;
 }
 
-.project-carousel {
+/* Carousel */
+.carousel {
     display: flex;
-    overflow-x: auto;
     gap: 20px;
-    justify-content: center;
-    padding: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.project-card {
+/* Project Tiles */
+.project-tile {
+    flex: 0 0 200px;
+    height: 250px;
     background: white;
-    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
     transition: transform 0.3s ease-in-out;
-    min-width: 250px;
 }
 
-.project-card img {
+.project-tile img {
     width: 100%;
-    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-.project-card:hover {
+.project-tile a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-tile:hover {
     transform: scale(1.1);
 }
+
 
 .about-section, .resume-section {
     max-width: 800px;

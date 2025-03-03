@@ -1,28 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const carousel = document.querySelector(".project-carousel");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".carousel-container");
+    const projectList = document.querySelector(".carousel");
 
-    carousel.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-    });
+    let scrollAmount = 0;
+    const scrollSpeed = 20; // Speed of scrolling
+    const scrollLimit = projectList.scrollWidth - carousel.clientWidth;
 
-    carousel.addEventListener("mouseleave", () => {
-        isDown = false;
-    });
-
-    carousel.addEventListener("mouseup", () => {
-        isDown = false;
-    });
+    function autoScroll(direction) {
+        if (direction === "left") {
+            scrollAmount = Math.max(scrollAmount - scrollSpeed, 0);
+        } else if (direction === "right") {
+            scrollAmount = Math.min(scrollAmount + scrollSpeed, scrollLimit);
+        }
+        projectList.style.transform = `translateX(-${scrollAmount}px)`;
+    }
 
     carousel.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 2; 
-        carousel.scrollLeft = scrollLeft - walk;
+        const { left, width } = carousel.getBoundingClientRect();
+        const mouseX = e.clientX - left;
+
+        if (mouseX < width * 0.2) {
+            autoScroll("left");
+        } else if (mouseX > width * 0.8) {
+            autoScroll("right");
+        }
     });
 });
