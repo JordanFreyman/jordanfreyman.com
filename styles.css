@@ -11,7 +11,7 @@ body {
     padding: 0;
     height: 100vh; /* Make sure the body takes the full height of the viewport */
     background:
-        linear-gradient(rgba(14, 15, 25, 0.7), rgba(14, 15, 25, 0.7)), /* Color with opacity */
+        linear-gradient(rgba(14, 15, 25, 0.2), rgba(14, 15, 25, 0.2)), /* Color with opacity */
         url('assets/stars.gif');
     /* background-color: rgba(14, 15, 25, 0.7); Background color with opacity
     background-image: url('file:///C:/Users/jfrey/Documents/GitHub/jordanfreyman.github.io/assets/stars.gif'); */
@@ -23,7 +23,7 @@ body {
 }
 
 .navbar {
-    background-color: #d89299;
+    background-color: #57886C;
     padding: 15px;
 }
 
@@ -85,7 +85,7 @@ body {
 
 
 .carousel-wrapper {
-    background-color: #bd7279; /* Background for the rectangle */
+    background-color: #57886C; /* Background for the rectangle */
     border-radius: 20px; /* Rounded corners */
     padding: 30px 20px; /* Space inside the rectangle */
     display: flex;
@@ -114,6 +114,7 @@ body {
     display: flex;
     gap: 1px;
     padding: 10px;
+    position: relative;
 }
 
 .project-tile {
@@ -135,8 +136,8 @@ body {
 }
 
 .project-title {
-    background-color: #F8C7CC;
-    color: #F8C7CC;
+    background-color: #81A684;
+    color: #81A684;
     padding: 10px;
     font-weight: bold;
     border-top-left-radius: 20px;
@@ -166,12 +167,10 @@ body {
 }
 
 .project-footer a {
-    color: #F8C7CC;
+    color: #81A684;
     text-decoration: none;
     font-weight: bold;
 }
-
-
 
 .project-tile:hover {
     z-index: 10; /* Bring it to the front */
@@ -185,8 +184,8 @@ body {
 
 .project-tile a {
     display: block;
-    margin-top: 10px;
-    color: #d89299;
+    margin-top: 20px;
+    color: #F8C7CC;
     text-decoration: none;
 }
 
