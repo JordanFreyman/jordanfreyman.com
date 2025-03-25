@@ -64,7 +64,7 @@ body {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    z-index: 10;      /* Ensure the arrows are above the carousel */
+    z-index: 100;      /* Ensure the arrows are above the carousel */
     transition: opacity 0.3s ease;
 }
 
@@ -91,7 +91,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Only as wide as the carousel */
+    width: 70%; /* Only as wide as the carousel */
     max-width: 1500px;
     overflow: visible;
     margin: auto; /* Centers the rectangle */
@@ -106,21 +106,25 @@ body {
     transition: transform 0.3s ease-in-out;
     will-change: transform;
     overflow: hidden;
-    position: relative; 
+    /* position: relative;  */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    white-space: nowrap; /* Prevents line breaks */
 }
 
 .carousel {
     transition: transform 0.5s ease; /* Smooth scroll effect */
     display: flex;
-    gap: 1px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 10px;
     padding: 10px;
+    width: max-content; /* Expands width to fit content */
     position: relative;
 }
 
 .project-tile {
     flex: 0 0 300px;
-    height: 500px;
-    /* margin: 0 10px; */
+    height: 450px;
     background: #88322c;
     border: 5px solid #681e18;
     border-radius: 20px;
@@ -132,8 +136,53 @@ body {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* Change from space-between to flex-start */
+    justify-content: flex-start;
 }
+
+.project-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+/* The container maintains a fixed aspect ratio (e.g., 16:9) */
+.project-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 90.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    overflow: hidden;
+}
+
+.project-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-tile a {
+    text-decoration: none !important; /* Force removes underline */
+    color: inherit !important; /* Inherit color from parent */
+    font-weight: bold;
+    display: block; /* Ensures full clickable area */
+}
+
+.project-tile a:visited,
+.project-tile a:active {
+    color: inherit !important; /* Prevents visited links from changing color */
+    text-decoration: none !important;
+}
+
+.project-tile a:hover {
+    color: #F8C7CC !important; /* Soft pink or another highlight color */
+    text-decoration: none !important;
+}
+
 
 .project-title {
     background-color: #81A684;
@@ -143,14 +192,14 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-
+/* 
 .project-image {
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
-}
+} */
 
 .project-image img {
     width: 100%;
@@ -174,7 +223,7 @@ body {
 
 .project-tile:hover {
     z-index: 10; /* Bring it to the front */
-    transform: scale(1.25); /* Make the tile bigger */
+    transform: scale(1.05); /* Make the tile bigger */
     position: relative; /* Make it positioned relative to the carousel container */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for a more dramatic effect */
     width: auto;
