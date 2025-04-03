@@ -11,13 +11,11 @@ body {
     padding: 0;
     height: 100vh; /* Make sure the body takes the full height of the viewport */
     background:
-        linear-gradient(rgba(14, 15, 25, 0.2), rgba(14, 15, 25, 0.2)), /* Color with opacity */
+        linear-gradient(rgba(14, 15, 25, 0.2), rgba(14, 15, 25, 0.2)), 
         url('assets/stars2.gif');
-    /* background-color: rgba(14, 15, 25, 0.7); Background color with opacity
-    background-image: url('file:///C:/Users/jfrey/Documents/GitHub/jordanfreyman.github.io/assets/stars.gif'); */
     background-repeat: repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: auto; /* Ensures natural tiling */
+    background-position: top left;
     /* min-height: 100vh; */
     /* background-color: #0E0F19; */
 }
