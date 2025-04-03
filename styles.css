@@ -20,6 +20,14 @@ body {
     /* background-color: #0E0F19; */
 }
 
+.shape-img {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
 .navbar {
     background-color: #b3524b;
     padding: 15px;
