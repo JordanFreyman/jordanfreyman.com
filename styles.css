@@ -15,7 +15,7 @@ body {
         url('assets/stars2.gif');
     /* background-color: rgba(14, 15, 25, 0.7); Background color with opacity
     background-image: url('file:///C:/Users/jfrey/Documents/GitHub/jordanfreyman.github.io/assets/stars.gif'); */
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center;
     /* min-height: 100vh; */
