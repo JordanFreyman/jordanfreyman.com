@@ -123,8 +123,8 @@ body {
 .project-tile {
     flex: 0 0 300px;
     height: 450px;
-    background: #88322c;
-    border: 5px solid #681e18;
+    background: #F8C7CC;
+    /* border: 5px solid #681e18; */
     border-radius: 20px;
     text-align: center;
     padding: 0;
@@ -169,6 +169,14 @@ body {
     font-weight: bold;
     display: block; /* Ensures full clickable area */
 }
+
+.project-title a:link,
+.project-title a:visited,
+.project-title a:active {
+    color: #F8C7CC !important;
+    text-decoration: none !important;
+}
+
 
 .project-tile a:visited,
 .project-tile a:active {
