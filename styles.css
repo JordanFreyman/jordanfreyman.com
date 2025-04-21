@@ -21,7 +21,7 @@ body {
 }
 
 .navbar {
-    background-color: #8e3f3a;
+    background-color: #652d29;
     padding: 15px;
 }
 
@@ -48,7 +48,7 @@ body {
     text-align: left;
     font-size: 26px;
     padding: 0px 10px;
-    color: #F8C7CC;
+    color: #ffe3d8;
 }
 
 
@@ -76,27 +76,58 @@ body {
     right: 10px; /* Position the right arrow */
 }
 
-/* Hover effect for arrows */
-.arrow:hover {
-    opacity: 0.8; /* Slight opacity change when hovered */
+@keyframes floatArrow {
+    0%   { transform: translateY(-2px); }
+    50%  { transform: translateY(2px); }
+    100% { transform: translateY(-2px); }
+}
+
+.arrow {
+    animation: floatArrow 2s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+}
+
+.arrow {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.arrow.invisible {
+    opacity: 0;
+    pointer-events: none;
 }
 
 
+
 .carousel-wrapper {
-    background-color: #8e3f3a; /* Background for the rectangle */
+    background-color: #652d29; /* Background for the rectangle */
     border-radius: 20px; /* Rounded corners */
-    padding: 30px 20px; /* Space inside the rectangle */
+    padding: 20px 20px; /* Space inside the rectangle */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%; /* Only as wide as the carousel */
-    max-width: 1500px;
+    width: 68%; /* Only as wide as the carousel */
+    max-width: 1000px;
     overflow: visible;
     margin: auto; /* Centers the rectangle */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
     position: relative;
+    z-index: 0;
 }
 
+.carousel-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Thin white outline */
+    border-radius: 10px;
+    pointer-events: none; /* Allows interaction with content */
+    border: 0.5px dashed rgba(255, 255, 255, 0.6);
+    z-index: 1; /* stays behind arrow buttons or hover states */
+}
 
 .carousel-container {
     display: flex;
@@ -122,8 +153,8 @@ body {
 
 .project-tile {
     flex: 0 0 300px;
-    height: 450px;
-    background: #F8C7CC;
+    height: 360px;
+    background: #f1c4c1;
     /* border: 5px solid #681e18; */
     border-radius: 20px;
     text-align: center;
@@ -136,6 +167,47 @@ body {
     flex-direction: column;
     /* Change from space-between to flex-start */
     justify-content: flex-start;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project-tile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust height to control shine area */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), transparent);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    pointer-events: none; /* Let mouse clicks pass through */
+    z-index: 2;
+}
+
+.project-tile::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    z-index: 3;
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.project-tile:hover::after {
+    left: 125%;
+}
+.project-tile:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .project-tile img {
