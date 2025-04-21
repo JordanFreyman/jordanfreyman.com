@@ -83,7 +83,7 @@ body {
 
 
 .carousel-wrapper {
-    background-color: #de736b; /* Background for the rectangle */
+    background-color: #8e3f3a; /* Background for the rectangle */
     border-radius: 20px; /* Rounded corners */
     padding: 30px 20px; /* Space inside the rectangle */
     display: flex;
@@ -173,7 +173,7 @@ body {
 .project-title a:link,
 .project-title a:visited,
 .project-title a:active {
-    color: #F8C7CC !important;
+    color: #652d33 !important;
     text-decoration: none !important;
 }
 
@@ -181,12 +181,12 @@ body {
 .project-tile:link h3,
 .project-tile:active h3,
 .project-tile:hover h3 {
-    color: #F8C7CC !important;  /* Or any color you prefer */
+    color: #652d33 !important;  /* Or any color you prefer */
     text-decoration: none !important;
 }
 
 .project-tile h3 {
-    color: #F8C7CC;
+    color: #652d33;
     margin: 0.5rem 0;
 }
 
