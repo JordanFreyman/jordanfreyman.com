@@ -236,6 +236,30 @@ body {
     text-decoration: none;
 }
 
+.split-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.split-layout .about-text {
+    flex: 1;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    max-width: 400px;
+}
+
+.image-gallery img {
+    flex-shrink: 0;
+    width: 160px;
+    border-radius: 0.5rem;
+}
 
 .about-section, .resume-section {
     max-width: 800px;
