@@ -21,7 +21,7 @@ body {
 }
 
 .navbar {
-    background-color: #b3524b;
+    background-color: #8e3f3a;
     padding: 15px;
 }
 
@@ -300,7 +300,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: left;
-    color: #F8C7CC;
+    color: #ffdee1;
 }
 
 .about-section ul {
@@ -319,7 +319,7 @@ body {
 
 
 * {
-    box-sizing: border-box; /* ensures padding and border are included in the element's width/height */
+    box-sizing: border-box; 
   }
   
   html, body {
