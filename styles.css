@@ -5,6 +5,11 @@
     font-style: normal;
 }
 
+::selection {
+    background-color: #b3524b;
+    color: #fff;
+}
+
 body {
     font-family: 'PlayfairDisplay-VariableFont_wght' , 'custom';
     margin: 0;
