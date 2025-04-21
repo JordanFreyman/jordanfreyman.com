@@ -177,6 +177,19 @@ body {
     text-decoration: none !important;
 }
 
+.project-tile:visited h3,
+.project-tile:link h3,
+.project-tile:active h3,
+.project-tile:hover h3 {
+    color: #F8C7CC !important;  /* Or any color you prefer */
+    text-decoration: none !important;
+}
+
+.project-tile h3 {
+    color: #F8C7CC;
+    margin: 0.5rem 0;
+}
+
 
 .project-tile a:visited,
 .project-tile a:active {
