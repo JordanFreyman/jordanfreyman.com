@@ -14,15 +14,13 @@ body {
     font-family: 'PlayfairDisplay-VariableFont_wght' , 'custom';
     margin: 0;
     padding: 0;
-    height: 100vh; /* Make sure the body takes the full height of the viewport */
+    height: 100vh;
     background:
         linear-gradient(rgba(14, 15, 25, 0.2), rgba(14, 15, 25, 0.2)), 
         url('assets/stars2.gif');
     background-repeat: repeat;
-    background-size: auto; /* Ensures natural tiling */
+    background-size: auto;
     background-position: top left;
-    /* min-height: 100vh; */
-    /* background-color: #0E0F19; */
 }
 
 .navbar {
@@ -57,28 +55,25 @@ body {
 }
 
 
-/* Arrows */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 40px;  /* Size of the arrow */
-    color: #fff;      /* White color */
+    font-size: 40px;
+    color: #fff;
     cursor: pointer;
     background-color: transparent;
     border: none;
-    z-index: 100;      /* Ensure the arrows are above the carousel */
+    z-index: 100;
     transition: opacity 0.3s ease;
 }
 
-/* Left Arrow */
 .arrow.left {
-    left: 10px; /* Position the left arrow */
+    left: 10px;
 }
 
-/* Right Arrow */
 .arrow.right {
-    right: 10px; /* Position the right arrow */
+    right: 10px;
 }
 
 @keyframes floatArrow {
@@ -105,17 +100,17 @@ body {
 
 
 .carousel-wrapper {
-    background-color: #652d29; /* Background for the rectangle */
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px 20px; /* Space inside the rectangle */
+    background-color: #652d29;
+    border-radius: 20px;
+    padding: 20px 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 68%; /* Only as wide as the carousel */
+    width: 68%;
     max-width: 1000px;
     overflow: visible;
-    margin: auto; /* Centers the rectangle */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 0;
 }
@@ -127,11 +122,11 @@ body {
     left: 20px;
     right: 20px;
     bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.6); /* Thin white outline */
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 10px;
-    pointer-events: none; /* Allows interaction with content */
+    pointer-events: none;
     border: 0.5px dashed rgba(255, 255, 255, 0.6);
-    z-index: 1; /* stays behind arrow buttons or hover states */
+    z-index: 1;
 }
 
 .carousel-container {
@@ -140,19 +135,18 @@ body {
     transition: transform 0.3s ease-in-out;
     will-change: transform;
     overflow: hidden;
-    /* position: relative;  */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    white-space: nowrap; /* Prevents line breaks */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
 }
 
 .carousel {
-    transition: transform 0.5s ease; /* Smooth scroll effect */
+    transition: transform 0.5s ease;
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap;
     gap: 10px;
     padding: 10px;
-    width: max-content; /* Expands width to fit content */
+    width: max-content;
     position: relative;
 }
 
@@ -160,7 +154,6 @@ body {
     flex: 0 0 300px;
     height: 360px;
     background: #f1c4c1;
-    /* border: 5px solid #681e18; */
     border-radius: 20px;
     text-align: center;
     padding: 0;
@@ -170,7 +163,6 @@ body {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    /* Change from space-between to flex-start */
     justify-content: flex-start;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
@@ -181,11 +173,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Adjust height to control shine area */
+    height: 60px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), transparent);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    pointer-events: none; /* Let mouse clicks pass through */
+    pointer-events: none;
     z-index: 2;
 }
 
@@ -222,11 +214,11 @@ body {
     object-position: center;
     display: block;
 }
-/* The container maintains a fixed aspect ratio (e.g., 16:9) */
+
 .project-image {
     position: relative;
     width: 100%;
-    padding-bottom: 90.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    padding-bottom: 90.25%;
     overflow: hidden;
 }
 
@@ -241,10 +233,10 @@ body {
 }
 
 .project-tile a {
-    text-decoration: none !important; /* Force removes underline */
-    color: inherit !important; /* Inherit color from parent */
+    text-decoration: none !important;
+    color: inherit !important;
     font-weight: bold;
-    display: block; /* Ensures full clickable area */
+    display: block;
 }
 
 .project-title a:link,
@@ -258,7 +250,7 @@ body {
 .project-tile:link h3,
 .project-tile:active h3,
 .project-tile:hover h3 {
-    color: #652d33 !important;  /* Or any color you prefer */
+    color: #652d33 !important;
     text-decoration: none !important;
 }
 
@@ -270,12 +262,12 @@ body {
 
 .project-tile a:visited,
 .project-tile a:active {
-    color: inherit !important; /* Prevents visited links from changing color */
+    color: inherit !important;
     text-decoration: none !important;
 }
 
 .project-tile a:hover {
-    color: #F8C7CC !important; /* Soft pink or another highlight color */
+    color: #F8C7CC !important;
     text-decoration: none !important;
 }
 
@@ -288,14 +280,6 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-/* 
-.project-image {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-} */
 
 .project-image img {
     width: 100%;
@@ -318,10 +302,10 @@ body {
 }
 
 .project-tile:hover {
-    z-index: 10; /* Bring it to the front */
-    transform: scale(1.05); /* Make the tile bigger */
-    position: relative; /* Make it positioned relative to the carousel container */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for a more dramatic effect */
+    z-index: 10;
+    transform: scale(1.05);
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: auto;
     height: auto;
     transform-origin: center;
@@ -365,6 +349,13 @@ body {
 .image-gallery img:hover {
     transform: scale(1.2);
     transition: transform 0.35s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
 }
 
 @media (max-width: 768px) {
@@ -486,18 +477,18 @@ body {
     width: 100%;
     max-width: 400px;
     padding: 12px 16px;
-    font-family: inherit;           /* Use your site’s font */
+    font-family: inherit; 
     font-size: 1rem;
-    color: #ffe3d8;                 /* Light pink text */
-    background-color: #1a1a2a;      /* Deep navy background */
-    border: 1px solid #444;         /* Soft border */
+    color: #ffe3d8;
+    background-color: #1a1a2a;
+    border: 1px solid #444;
     border-radius: 6px;
     resize: vertical;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .contact-form textarea::placeholder {
-    color: #977b7b;                    /* Dimmed placeholder */
+    color: #977b7b;
 }
 
 .contact-form textarea:focus {
@@ -545,4 +536,13 @@ body {
     font-size: 0.9rem;
     color: #aaa;
     margin-top: 20px;
+}
+
+.project-images {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem auto;
+    display: block;
 }
